@@ -10,6 +10,8 @@ Welcome to naosoccer_sim's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   naosoccer_sim
+
 
 
 Indices and tables
