@@ -3,13 +3,6 @@ naosoccer_sim Node
 
 ROS2 package for interacting with the SimSpark simulation used in the RoboCup 3D simulation league, from a nao api.
 
-Subscribed Topics
-*****************
-
-**effectors/joints** (*nao_interfaces/msg/Joints*)
-
-    Joint effector commands to be sent to the robot
-
 Published Topics
 ****************
 
@@ -30,6 +23,14 @@ Published Topics
 * **sensors/touch** (*nao_interfaces/msg/Touch*)
 
 * **vision/ball** (*geometry_msgs/msg/PointStamped*) - Ball vision information with frame_id 'CameraTop_frame'
+
+
+Subscribed Topics
+*****************
+
+**effectors/joints** (*nao_interfaces/msg/Joints*)
+
+    Joint effector commands to be sent to the robot
 
 Parameters
 **********
