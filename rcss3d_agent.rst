@@ -1,5 +1,5 @@
-naosoccer_sim Node
-##################
+rcss3d_agent
+############
 
 ROS2 package for interacting with the SimSpark simulation used in the RoboCup 3D simulation league, from a nao api.
 
@@ -22,44 +22,46 @@ Published Topics
 
 * **sensors/touch** (`nao_interfaces/msg/Touch`_)
 
-* **vision/ball** (`geometry_msgs/msg/PointStamped`_) - Ball vision information with frame_id 'CameraTop_frame'
+* **vision/ball** (`geometry_msgs/msg/PointStamped`_) 
+
+    Ball vision information with frame_id 'CameraTop_frame'
 
 
 Subscribed Topics
 *****************
 
-**effectors/joints** (`nao_interfaces/msg/Joints`_)
+* **effectors/joints** (`nao_interfaces/msg/Joints`_)
 
     Joint effector commands to be sent to the robot
 
 Parameters
 **********
 
-* **host** (*string*)
+* **host** (*string*, default="127.0.0.1")
 
     Host IP Address that simulation server is running on
     
-* **port** (*int*)
+* **port** (*int*, default=3100)
 
     Port number that simulation server is communicating on
     
-* **team** (*string*)
+* **team** (*string*, default="Anonymous")
 
     Team name of robot, to be sent to simulation server
     
-* **player_number** (*int*)
+* **player_number** (*int*, default=0)
 
     Player number of robot, to be sent to simulation server
 
-* **initial_pose_x** (*double*)
+* **initial_pose_x** (*double*, default=0.0)
 
     Initial position of robot along the x-axis of the field in metres, where 0.0 is the centre, and positive x is towards the opponent goal.
     
-* **initial_pose_y** (*double*)
+* **initial_pose_y** (*double*, default=0.0)
 
     Initial position of robot along the y-axis of the field in metres, where 0.0 is the centre, and positive y is left when facing the opponent goal.
     
-* **initial_pose_theta** (*double*)
+* **initial_pose_theta** (*double*, default=0.0)
 
     Initial heading of robot along the x-axs of the field in radians, where 0.0 is facing the opponent goal, and positive theta is anti-clockwise.
 

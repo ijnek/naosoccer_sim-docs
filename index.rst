@@ -10,8 +10,9 @@ Welcome to naosoccer_sim's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   naosoccer_sim
+   rcss3d_agent
    joints_to_joint_state
+   nao_buttons_sim
 
 
 
