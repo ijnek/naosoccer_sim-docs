@@ -21,8 +21,5 @@ is listed in :ref:`development-statuses`.
 
    running-the-robot
    simulate-button-presses
-   rcss3d_agent
-   joints_to_joint_state
-   nao_buttons_sim
-   naosoccer_sim_launch
+   packages
    development-statuses
