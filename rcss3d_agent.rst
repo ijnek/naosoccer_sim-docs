@@ -1,7 +1,21 @@
 rcss3d_agent
 ############
 
-ROS2 package for interacting with the SimSpark simulation used in the RoboCup 3D simulation league, from a nao api.
+A ROS2 package for interacting with the rcssserver3d simulation server
+used in the RoboCup 3D Simulation League.
+
+The package aims to provide an interface that closely matches that of the
+the physical Softbank NAO, rather than that of the simulation interface so
+it can be used in the RoboCup Standard Platform League. The package performs
+the bridging between the simulation interface and the Softbank's nao interface.
+
+To be specific, the simulator uses different sensors and joint command formats
+from a physical NAO. The conversion takes place in this package.
+
+.. note::
+    The simulation server **does not provide camera images**. This means that
+    vision data, such as balls, robots, and field features are published rather
+    than raw images.
 
 Published Topics
 ****************
