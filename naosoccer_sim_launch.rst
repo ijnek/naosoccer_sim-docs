@@ -6,7 +6,7 @@ player up and running in the rcssserver3d.
 
 Run,
 
-.. code-block:: bash
+.. code-block:: console
 
     ros2 launch naosoccer_sim_launch player_launch.py
 

@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'naosoccer_sim'
+project = 'Nao Soccer Sim'
 copyright = '2021, Kenji Brameld'
 author = 'Kenji Brameld'
 
@@ -96,6 +96,8 @@ html_static_path = ['_static']
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
+
+html_logo = 'images/icon.png'
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
