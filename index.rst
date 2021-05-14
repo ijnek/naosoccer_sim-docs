@@ -20,6 +20,6 @@ is listed in :ref:`development-statuses`.
    :maxdepth: 2
 
    running-the-robot
-   simulate-button-presses
+   running-the-button-simulator
    packages
    development-statuses
