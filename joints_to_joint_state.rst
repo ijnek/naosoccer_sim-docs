@@ -1,7 +1,7 @@
 joints_to_joint_state
 #####################
 
-ROS2 package for converting nao_interfaces/msg/Joints.msg to sensor_msgs/msg/JointState.msg.
+ROS2 package for converting `nao_interfaces/msg/Joints`_ to `sensor_msgs/msg/JointState`_.
 This node is required mainly for visualization in RViz.
 
 Published Topics
