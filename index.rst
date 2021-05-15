@@ -19,6 +19,7 @@ is listed in :ref:`development-statuses`.
    :hidden:
    :maxdepth: 2
 
+   installation
    running-the-robot
    running-the-button-simulator
    packages
