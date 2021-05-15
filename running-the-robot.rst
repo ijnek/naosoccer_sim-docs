@@ -13,7 +13,7 @@ This is a tutorial on how to launch a simulated NAO robot in the SimSpark simula
     This tutorial assumes that you have built the packages in this repository and have sourced the setup file
     for the workspace you are in.
 
-Starting rcsoccersim3d
+Starting the Simulator
 **********************
 
 In a terminal, start the simulator by running:
@@ -29,45 +29,86 @@ In a terminal, start the simulator by running:
     server processes lingering. To kill this process, run ``pkill -9 rcssserver3d`` before restarting
     the simulation server.
 
-Starting rcss3d_agent node
-**************************
+Launching a Player
+******************
 
 In a new terminal, run:
 
 .. code-block:: console
 
-    ros2 run rcss3d_agent rcss3d_agent
+    ros2 launch rcss3d_agent player_launch.py
 
 You should see your robot in the rcssmonitor3d:
 
 .. image:: images/screenshot.png
 
 
-List Publishing/Subscribed Topics
-*********************************
+Print out Published Topics
+**************************
+
+Let's try and print out the visual ball information received by our simulated robot.
+In a new terminal, run:
+
+.. code-block:: console
+
+    ros2 topic echo vision/ball
+
+The terminal will start spamming information that looks like below:
+
+.. code-block:: console
+
+    header:
+    stamp:
+        sec: 1621042538
+        nanosec: 632577496
+    frame_id: CameraTop_frame
+    point:
+    x: 2.4840080627559
+    y: 0.29839877333321424
+    z: -0.4931144624222307
+    ---
+
+To visualise other topics that can be echoed are listed in :ref:`published-topics`.
+By writing a subscriber that subccribes to any of the topic, you can access this informaion from your own package.
+
+Moving the Robot's Joints
+*************************
+
+To send a joint command to the simulated robot, you must publish `nao_interfaces/msg/Joints`_ data
+to the **effectors/joints** topic:
+
+Let's try and move the HeadYaw joint so that the robot face 90 degrees left. To do so, we publish an array of joint
+angles, and specify 1.57 radians (90 degrees) for the HeadYaw joint.
 
 In a new terminal, run:
 
 .. code-block:: console
 
-    ros2 topic list
+    ros2 topic pub /effectors/joints nao_interfaces/msg/Joints "{angles:[1.57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}"
 
-A list of topics that the node is subscribed to or publishing will show up:
+In the simulation monitor, you should see the robot with its head twisted.
 
-.. code-block:: console
+.. image:: images/robot_face_left.png
 
-    /effectors/joints
-    /parameter_events
-    /rosout
-    /sensors/accelerometer
-    /sensors/angle
-    /sensors/buttons
-    /sensors/fsr
-    /sensors/gyroscope
-    /sensors/joints
-    /sensors/sonar
-    /sensors/touch
-    /vision/ball
+.. note::
+    
+    See `joint_indexes`_ to see which joint corresponds to each index of the float array published in the previous message.
+
+.. tip::
+
+    Spend a bit of time playing around with the angles for each joint if you are not familiar with
+    the NAO's joints!
+
+Summary
+*******
+
+That's it! You should by now know how to 
+
+* start up a simulated robot
+* access sensory data
+* and send joint commands
 
 
 .. _SimSpark's Gitlab: https://gitlab.com/robocup-sim/SimSpark/-/wikis/home
+.. _nao_interfaces/msg/Joints: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#joints
+.. _joint_indexes: https://nao-interfaces-docs.readthedocs.io/en/latest/joint-indexes.html

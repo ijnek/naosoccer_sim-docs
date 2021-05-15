@@ -1,6 +1,9 @@
 rcss3d_agent
 ############
 
+rcss3d_agent Node
+*****************
+
 A ROS2 package for interacting with the rcssserver3d simulation server
 used in the RoboCup 3D Simulation League.
 
@@ -17,8 +20,10 @@ from a physical NAO. The conversion takes place in this package.
     vision data, such as balls, robots, and field features are published rather
     than raw images.
 
+.. _published-topics:
+    
 Published Topics
-****************
+================
 
 * **sensors/joints** (`nao_interfaces/msg/Joints`_)
 
@@ -42,14 +47,14 @@ Published Topics
 
 
 Subscribed Topics
-*****************
+=================
 
 * **effectors/joints** (`nao_interfaces/msg/Joints`_)
 
     Joint effector commands to be sent to the robot
 
 Parameters
-**********
+==========
 
 * **host** (*string*, default="127.0.0.1")
 
@@ -79,6 +84,21 @@ Parameters
 
     Initial heading of robot along the x-axs of the field in radians, where 0.0 is facing the opponent goal, and positive theta is anti-clockwise.
 
+nao_state_publisher Node
+************************
+
+Inherits `robot_state_publisher`_ , but rather than listening for topic:
+
+* **joint_states** (`sensor_msgs/JointState`_)
+
+it listens for topic:
+
+* **sensors/joints** (`nao_interfaces/msg/Joints`_)
+
+and publishes ROS2 transforms. 
+
+See `robot_state_publisher`_'s documentation for more details.
+
 
 .. _nao_interfaces/msg/Joints: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#joints
 .. _nao_interfaces/msg/Buttons: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#buttons
@@ -89,3 +109,5 @@ Parameters
 .. _nao_interfaces/msg/FSR: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#fsr
 .. _nao_interfaces/msg/Touch: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#touch
 .. _geometry_msgs/msg/PointStamped: http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/PointStamped.html
+.. _robot_state_publisher: http://wiki.ros.org/robot_state_publisher
+.. _sensor_msgs/JointState: http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/JointState.html
