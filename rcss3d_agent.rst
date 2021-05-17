@@ -68,19 +68,19 @@ Parameters
 
     Team name of robot, to be sent to simulation server
     
-* **player_number** (*int*, default=0)
+* **number** (*int*, default=0)
 
     Player number of robot, to be sent to simulation server
 
-* **initial_pose_x** (*double*, default=0.0)
+* **x** (*double*, default=0.0)
 
     Initial position of robot along the x-axis of the field in metres, where 0.0 is the centre, and positive x is towards the opponent goal.
     
-* **initial_pose_y** (*double*, default=0.0)
+* **y** (*double*, default=0.0)
 
     Initial position of robot along the y-axis of the field in metres, where 0.0 is the centre, and positive y is left when facing the opponent goal.
     
-* **initial_pose_theta** (*double*, default=0.0)
+* **theta** (*double*, default=0.0)
 
     Initial heading of robot along the x-axs of the field in radians, where 0.0 is facing the opponent goal, and positive theta is anti-clockwise.
 
