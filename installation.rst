@@ -1,18 +1,26 @@
 Installation
 ############
 
-Create a workspace and clone the repository:
+.. note::
+
+    Instructions here assume that you have and are in the ROS2 workspace
+    root directory.
+
+Cloning repositories
+********************
+
+In your ROS2 workspace, clone the repository:
 
 .. code-block:: console
 
-   mkdir -p ~/naosoccer_ws/src
-   cd ~/naosoccer_ws/
    git clone --recursive https://github.com/ijnek/naosoccer_sim.git src/naosoccer_sim
+   vcs import src < src/naosoccer_sim/dependencies.repos
 
+Building
+********
 
-Install dependencies:
+To build the package and its dependencies, in the workspace root directory, run:
 
 .. code-block:: console
 
-   vcs import src < src/naosoccer_sim/dependencies.repos
    colcon build
