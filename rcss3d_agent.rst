@@ -27,8 +27,6 @@ Published Topics
 
 * **sensors/joints** (`nao_interfaces/msg/Joints`_)
 
-* **sensors/buttons** (`nao_interfaces/msg/Buttons`_)
-
 * **sensors/accelerometer** (`nao_interfaces/msg/Accelerometer`_)
 
 * **sensors/gyroscope** (`nao_interfaces/msg/Gyroscope`_)
@@ -39,11 +37,15 @@ Published Topics
 
 * **sensors/fsr** (`nao_interfaces/msg/FSR`_)
 
-* **sensors/touch** (`nao_interfaces/msg/Touch`_)
+* **vision/ball** (`geometry_msgs/msg/PointStamped`_)
 
-* **vision/ball** (`geometry_msgs/msg/PointStamped`_) 
+* **vision/field_lines** (`soccer_vision_msgs/msg/FieldLineArray`_)
 
-    Ball vision information with frame_id 'CameraTop_frame'
+* **vision/goalposts** (`soccer_vision_msgs/msg/GoalpostArray`_)
+
+* **vision/robots** (`soccer_vision_msgs/msg/RobotArray`_)
+
+* **vision/flags** (`soccer_vision_msgs/msg/FlagArray`_)
 
 
 Subscribed Topics
@@ -94,3 +96,7 @@ Parameters
 .. _nao_interfaces/msg/FSR: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#fsr
 .. _nao_interfaces/msg/Touch: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#touch
 .. _geometry_msgs/msg/PointStamped: http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/PointStamped.html
+.. _soccer_vision_msgs/msg/FieldLineArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#fieldlinearray
+.. _soccer_vision_msgs/msg/RobotArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#robotarray
+.. _soccer_vision_msgs/msg/GoalpostArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#goalpostarray
+.. _soccer_vision_msgs/msg/FlagArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#flagarray
