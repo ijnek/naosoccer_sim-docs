@@ -20,4 +20,3 @@ It **cannot be used yet** for:
 * Receiving the following vision data; Field Features
 * Receiving the following joint sensory information; temperature, current, stiffness
 * Specifying stiffness in joint effector comamnds
-* Sending eye led commands
