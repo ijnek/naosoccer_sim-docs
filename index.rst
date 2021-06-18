@@ -28,4 +28,4 @@ is listed in :ref:`development-statuses`.
    development-statuses
    related-ros2-packages
 
-.. _Github: https://github.com/ijnek/naosoccer_pos_action
+.. _Github: https://github.com/ijnek/naosoccer_sim
