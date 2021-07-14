@@ -1,6 +1,10 @@
 Related ROS2 Packages
 #####################
 
+* `nao_lola`_ package
+
+    Deals with the NAO's RoboCup-tailored Lola middle-ware.
+
 * `naosoccer_sim`_ package
 
     Simulates a Nao in the SimSpark 3D soccer simulator.
@@ -33,6 +37,7 @@ Related ROS2 Packages
 
 
 .. _nao: https://ros2-nao.readthedocs.io/en/latest/index.html
+.. _nao_lola: https://nao-lola.readthedocs.io/en/latest/index.html
 .. _nao_interfaces: https://nao-interfaces-docs.readthedocs.io/en/latest/
 .. _naosoccer_visualization: https://nao-soccer-visualization.readthedocs.io/en/latest/
 .. _naosoccer_sim: https://naosoccer-sim.readthedocs.io/en/latest/index.html
