@@ -1,9 +1,6 @@
 rcss3d_agent
 ############
 
-rcss3d_agent Node
-*****************
-
 A ROS2 package for interacting with the rcssserver3d simulation server
 used in the RoboCup 3D Simulation League.
 
@@ -23,19 +20,19 @@ from a physical NAO. The conversion takes place in this package.
 .. _published-topics:
     
 Published Topics
-================
+****************
 
-* **sensors/joints** (`nao_interfaces/msg/Joints`_)
+* **sensors/joint_positions** (`nao_sensor_msgs/msg/JointPositions`_)
 
-* **sensors/accelerometer** (`nao_interfaces/msg/Accelerometer`_)
+* **sensors/accelerometer** (`nao_sensor_msgs/msg/Accelerometer`_)
 
-* **sensors/gyroscope** (`nao_interfaces/msg/Gyroscope`_)
+* **sensors/gyroscope** (`nao_sensor_msgs/msg/Gyroscope`_)
 
-* **sensors/angle** (`nao_interfaces/msg/Angle`_)
+* **sensors/angle** (`nao_sensor_msgs/msg/Angle`_)
 
-* **sensors/sonar** (`nao_interfaces/msg/Sonar`_)
+* **sensors/sonar** (`nao_sensor_msgs/msg/Sonar`_)
 
-* **sensors/fsr** (`nao_interfaces/msg/FSR`_)
+* **sensors/fsr** (`nao_sensor_msgs/msg/FSR`_)
 
 * **vision/ball** (`geometry_msgs/msg/PointStamped`_)
 
@@ -49,14 +46,14 @@ Published Topics
 
 
 Subscribed Topics
-=================
+*****************
 
-* **effectors/joints** (`nao_interfaces/msg/Joints`_)
+* **effectors/joint_positions** (`nao_command_msgs/msg/JointPositions`_)
 
     Joint effector commands to be sent to the robot
 
 Parameters
-==========
+**********
 
 * **host** (*string*, default="127.0.0.1")
 
@@ -87,16 +84,17 @@ Parameters
     Initial heading of robot along the x-axs of the field in radians, where 0.0 is facing the opponent goal, and positive theta is anti-clockwise.
 
 
-.. _nao_interfaces/msg/Joints: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#joints
-.. _nao_interfaces/msg/Buttons: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#buttons
-.. _nao_interfaces/msg/Accelerometer: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#accelerometer
-.. _nao_interfaces/msg/Gyroscope: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#gyroscope
-.. _nao_interfaces/msg/Angle: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#angle
-.. _nao_interfaces/msg/Sonar: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#sonar
-.. _nao_interfaces/msg/FSR: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#fsr
-.. _nao_interfaces/msg/Touch: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#touch
+.. _nao_sensor_msgs/msg/JointPositions: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#jointpositions
+.. _nao_sensor_msgs/msg/Buttons: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#buttons
+.. _nao_sensor_msgs/msg/Accelerometer: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#accelerometer
+.. _nao_sensor_msgs/msg/Gyroscope: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#gyroscope
+.. _nao_sensor_msgs/msg/Angle: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#angle
+.. _nao_sensor_msgs/msg/Sonar: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#sonar
+.. _nao_sensor_msgs/msg/FSR: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#fsr
+.. _nao_sensor_msgs/msg/Touch: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#touch
 .. _geometry_msgs/msg/PointStamped: http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/PointStamped.html
 .. _soccer_vision_msgs/msg/FieldLineArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#fieldlinearray
 .. _soccer_vision_msgs/msg/RobotArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#robotarray
 .. _soccer_vision_msgs/msg/GoalpostArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#goalpostarray
 .. _soccer_vision_msgs/msg/FlagArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#flagarray
+.. _nao_command_msgs/msg/JointPositions: https://nao-interfaces-docs.readthedocs.io/en/latest/command-msgs.html#jointpositions

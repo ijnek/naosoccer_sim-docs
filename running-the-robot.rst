@@ -36,7 +36,7 @@ In a new terminal, run:
 
 .. code-block:: console
 
-    ros2 launch rcss3d_agent player_launch.py
+    ros2 run rcss3d_agent rcss3d_agent
 
 You should see your robot in the rcssmonitor3d:
 
@@ -74,8 +74,8 @@ By writing a subscriber that subccribes to any of the topic, you can access this
 Moving the Robot's Joints
 *************************
 
-To send a joint command to the simulated robot, you must publish `nao_interfaces/msg/Joints`_ data
-to the **effectors/joints** topic:
+To send a joint command to the simulated robot, you must publish `nao_command_msgs/msg/JointPositions`_ data
+to the ``effectors/joint_positions`` topic:
 
 Let's try and move the HeadYaw joint so that the robot face 90 degrees left. To do so, we publish an array of joint
 angles, and specify 1.57 radians (90 degrees) for the HeadYaw joint.
@@ -84,7 +84,7 @@ In a new terminal, run:
 
 .. code-block:: console
 
-    ros2 topic pub /effectors/joints nao_interfaces/msg/Joints "{angles:[1.57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}"
+    ros2 topic pub --once /effectors/joint_positions nao_command_msgs/msg/JointPositions '{indexes:{0}, positions:{1.57}}'
 
 In the simulation monitor, you should see the robot with its head twisted.
 
@@ -106,9 +106,9 @@ That's it! You should by now know how to
 
 * start up a simulated robot
 * access sensory data
-* and send joint commands
+* and send joint position commands
 
 
 .. _SimSpark's Gitlab: https://gitlab.com/robocup-sim/SimSpark/-/wikis/home
-.. _nao_interfaces/msg/Joints: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#joints
-.. _joint_indexes: https://nao-interfaces-docs.readthedocs.io/en/latest/joint-indexes.html
+.. _nao_command_msgs/msg/JointPositions: https://nao-interfaces-docs.readthedocs.io/en/latest/command-msgs.html#jointpositions
+.. _joint_indexes: https://nao-interfaces-docs.readthedocs.io/en/latest/joints.html#joint-indexes

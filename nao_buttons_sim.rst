@@ -8,7 +8,7 @@ Publishes at 50Hz. (This may change)
 Published Topics
 ****************
 
-* **buttons** (`nao_interfaces/msg/Buttons`_)
+* **buttons** (`nao_sensor_msgs/msg/Buttons`_)
 
 Parameters
 **********
@@ -24,4 +24,4 @@ Example
 
     ros2 run nao_buttons_sim nao_buttons_sim
 
-.. _nao_interfaces/msg/Buttons: https://nao-interfaces-docs.readthedocs.io/en/latest/msgs.html#buttons
+.. _nao_sensor_msgs/msg/Buttons: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#buttons
