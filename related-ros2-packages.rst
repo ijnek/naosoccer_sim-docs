@@ -9,6 +9,10 @@ Related ROS2 Packages
 
     Simulates a Nao in the SimSpark 3D soccer simulator.
 
+* `soccer_visualization`_ package
+
+    Visualizes topics in a soccer domain, in RViz.
+
 * `naosoccer_visualization`_ package
 
     Visualizes topics from a Nao in a soccer domain, in RViz.
@@ -33,11 +37,10 @@ Related ROS2 Packages
 
     Makes the robot perform a keyframe motion
 
-    
-
 
 .. _nao: https://ros2-nao.readthedocs.io/en/latest/index.html
 .. _nao_lola: https://nao-lola.readthedocs.io/en/latest/index.html
+.. _soccer_visualization: https://soccer-visualization.readthedocs.io/en/latest/index.html
 .. _nao_interfaces: https://nao-interfaces-docs.readthedocs.io/en/latest/
 .. _naosoccer_visualization: https://nao-soccer-visualization.readthedocs.io/en/latest/
 .. _naosoccer_sim: https://naosoccer-sim.readthedocs.io/en/latest/index.html
