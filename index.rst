@@ -14,9 +14,6 @@ as if you are interacting with a physical NAO robot.
 
 The project is hosted on `Github`_.
 
-The set of packages are under development, details on what is ready and what is not ready,
-is listed in :ref:`development-statuses`.
-
 .. toctree::
    :hidden:
    :maxdepth: 2

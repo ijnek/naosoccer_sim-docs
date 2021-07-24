@@ -8,11 +8,6 @@ This is a tutorial on how to launch a simulated NAO robot in the SimSpark simula
     This tutorial assumes that you have set up rcssserver3d on your computer. If you haven't done so already,
     go to `SimSpark's Gitlab`_ and follow the installation instructions.
 
-.. attention::
-
-    This tutorial assumes that you have built the packages in this repository and have sourced the setup file
-    for the workspace you are in.
-
 Starting the Simulator
 **********************
 
@@ -23,7 +18,7 @@ In a terminal, start the simulator by running:
     rcsoccersim3d
     
 
-.. warning::
+.. tip::
 
     Simulator tends to crash sometimes when connecting / disconnecting agents, which leaves unwanted
     server processes lingering. To kill this process, run ``pkill -9 rcssserver3d`` before restarting
@@ -32,13 +27,13 @@ In a terminal, start the simulator by running:
 Launching a Player
 ******************
 
-In a new terminal, run:
+In a new terminal, source the workspace setup file and then run:
 
 .. code-block:: console
 
     ros2 run rcss3d_agent rcss3d_agent
 
-You should see your robot in the rcssmonitor3d:
+Moving the camera around, you should see your robot in the rcssmonitor3d:
 
 .. image:: images/screenshot.png
 
@@ -53,7 +48,7 @@ In a new terminal, run:
 
     ros2 topic echo vision/ball
 
-The terminal will start spamming information that looks like below:
+The terminal will start echoing information the agent is publishing to the vision/ball topic, like below:
 
 .. code-block:: console
 
@@ -68,8 +63,8 @@ The terminal will start spamming information that looks like below:
     z: -0.4931144624222307
     ---
 
-To visualise other topics that can be echoed are listed in :ref:`published-topics`.
-By writing a subscriber that subccribes to any of the topic, you can access this informaion from your own package.
+Other topics the agent is publishing to are listed in :ref:`published-topics`.
+By writing a node that subscribes to these topics, you can access this information in your own package.
 
 Moving the Robot's Joints
 *************************
@@ -77,8 +72,8 @@ Moving the Robot's Joints
 To send a joint command to the simulated robot, you must publish `nao_command_msgs/msg/JointPositions`_ data
 to the ``effectors/joint_positions`` topic:
 
-Let's try and move the HeadYaw joint so that the robot face 90 degrees left. To do so, we publish an array of joint
-angles, and specify 1.57 radians (90 degrees) for the HeadYaw joint.
+Let's try and rotate the HeadYaw joint so that the robot faces 90 degrees to the left.
+To do so, we publish an array of joint angles, and specify 1.57 radians (90 degrees) for the HeadYaw joint.
 
 In a new terminal, run:
 
@@ -90,7 +85,7 @@ In the simulation monitor, you should see the robot with its head twisted.
 
 .. image:: images/robot_face_left.png
 
-.. note::
+.. seealso::
     
     See `joint_indexes`_ to see which joint corresponds to each index of the float array published in the previous message.
 
@@ -105,8 +100,8 @@ Summary
 That's it! You should by now know how to 
 
 * start up a simulated robot
-* access sensory data
-* and send joint position commands
+* access sensor information
+* send joint position commands
 
 
 .. _SimSpark's Gitlab: https://gitlab.com/robocup-sim/SimSpark/-/wikis/home

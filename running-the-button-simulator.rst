@@ -4,7 +4,18 @@ Running the Button Simulator
 Because SimSpark does not provide a way to interact with the buttons on the NAO, a separate command
 line program was developed to simulate button presses.
 
-In a new terminal, run ``ros2 run nao_button_sim nao_button_sim``.
+In a new terminal, run 
+
+.. code-block:: console
+
+    ros2 run nao_button_sim nao_button_sim
+
+.. important::
+
+    **If you see your terminal getting spammed**, increase the width of your terminal window, 
+    or zoom out (Ctrl and -) a couple of times, to ensure the terminal window
+    is at least 110 characters wide.
+    Once the spamming stops, kill the node (Ctrl + C), and rerun it.
 
 To simulate a button press, click on a key specified in the assigned keys list below.
 

@@ -13,9 +13,8 @@ To be specific, the simulator uses different sensors and joint command formats
 from a physical NAO. The conversion takes place in this package.
 
 .. note::
-    The simulation server **does not provide camera images**. This means that
-    vision data, such as balls, robots, and field features are published rather
-    than raw images.
+    The simulation server **does not provide camera images**. This means that,
+    including balls, robots, and field features, **vision data is published** .
 
 .. _published-topics:
     
@@ -49,8 +48,6 @@ Subscribed Topics
 *****************
 
 * **effectors/joint_positions** (`nao_command_msgs/msg/JointPositions`_)
-
-    Joint effector commands to be sent to the robot
 
 Parameters
 **********

@@ -1,5 +1,3 @@
-.. _development-statuses:
-
 Development Statuses
 ####################
 
