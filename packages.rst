@@ -6,5 +6,5 @@ The project consists of the following packages. Further information is provided 
 .. toctree::
     :maxdepth: 1
 
-    rcss3d_agent
+    rcss3d_nao
     nao_buttons_sim

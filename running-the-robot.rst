@@ -31,7 +31,7 @@ In a new terminal, source the workspace setup file and then run:
 
 .. code-block:: console
 
-    ros2 run rcss3d_agent rcss3d_agent
+    ros2 run rcss3d_nao rcss3d_nao
 
 Moving the camera around, you should see your robot in the rcssmonitor3d:
 
@@ -57,10 +57,10 @@ The terminal will start echoing information the agent is publishing to the visio
         sec: 1621042538
         nanosec: 632577496
     frame_id: CameraTop_frame
-    point:
-    x: 2.4840080627559
-    y: 0.29839877333321424
-    z: -0.4931144624222307
+    center:
+        x: 2.4840080627559
+        y: 0.29839877333321424
+        z: -0.4931144624222307
     ---
 
 Other topics the agent is publishing to are listed in :ref:`published-topics`.

@@ -1,5 +1,5 @@
-rcss3d_agent
-############
+rcss3d_nao
+##########
 
 A ROS2 package for interacting with the rcssserver3d simulation server
 used in the RoboCup 3D Simulation League.
@@ -29,11 +29,7 @@ Published Topics
 
 * **sensors/angle** (`nao_sensor_msgs/msg/Angle`_)
 
-* **sensors/sonar** (`nao_sensor_msgs/msg/Sonar`_)
-
-* **sensors/fsr** (`nao_sensor_msgs/msg/FSR`_)
-
-* **vision/ball** (`geometry_msgs/msg/PointStamped`_)
+* **vision/ball** (`soccer_vision_msgs/msg/Ball`_)
 
 * **vision/field_lines** (`soccer_vision_msgs/msg/FieldLineArray`_)
 
@@ -52,11 +48,11 @@ Subscribed Topics
 Parameters
 **********
 
-* **host** (*string*, default="127.0.0.1")
+* **rcss3d/host** (*string*, default="127.0.0.1")
 
     Host IP Address that simulation server is running on
     
-* **port** (*int*, default=3100)
+* **rcss3d/port** (*int*, default=3100)
 
     Port number that simulation server is communicating on
     
@@ -64,7 +60,7 @@ Parameters
 
     Team name of robot, to be sent to simulation server
     
-* **number** (*int*, default=0)
+* **unum** (*int*, default=0)
 
     Player number of robot, to be sent to simulation server
 
@@ -78,18 +74,15 @@ Parameters
     
 * **theta** (*double*, default=0.0)
 
-    Initial heading of robot along the x-axs of the field in radians, where 0.0 is facing the opponent goal, and positive theta is anti-clockwise.
-
+    Initial heading of robot from the positive x-axis of the field in radians, where 0.0 is facing the opponent goal, and positive theta is anti-clockwise.
 
 .. _nao_sensor_msgs/msg/JointPositions: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#jointpositions
 .. _nao_sensor_msgs/msg/Buttons: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#buttons
 .. _nao_sensor_msgs/msg/Accelerometer: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#accelerometer
 .. _nao_sensor_msgs/msg/Gyroscope: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#gyroscope
 .. _nao_sensor_msgs/msg/Angle: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#angle
-.. _nao_sensor_msgs/msg/Sonar: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#sonar
-.. _nao_sensor_msgs/msg/FSR: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#fsr
 .. _nao_sensor_msgs/msg/Touch: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#touch
-.. _geometry_msgs/msg/PointStamped: http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/PointStamped.html
+.. _soccer_vision_msgs/msg/Ball: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#ball
 .. _soccer_vision_msgs/msg/FieldLineArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#fieldlinearray
 .. _soccer_vision_msgs/msg/RobotArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#robotarray
 .. _soccer_vision_msgs/msg/GoalpostArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#goalpostarray
