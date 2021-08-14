@@ -1,16 +1,14 @@
 rcss3d_nao
 ##########
 
-A ROS2 package for interacting with the rcssserver3d simulation server
-used in the RoboCup 3D Simulation League.
+A ROS2 package that uses `ROS2 Nao interfaces`_ to interact with the rcssserver3d
+simulation server used in the RoboCup 3D Simulation League.
+The package **rcss3d_nao** uses `Compile-time composition`_ to build upon the
+`ros2_rcss3d (ijnek fork)`_ package to achieve `Efficient intra-process communication`_.
 
 The package aims to provide an interface that closely matches that of the
 the physical Softbank NAO, rather than that of the simulation interface so
-it can be used in the RoboCup Standard Platform League. The package performs
-the bridging between the simulation interface and the Softbank's nao interface.
-
-To be specific, the simulator uses different sensors and joint command formats
-from a physical NAO. The conversion takes place in this package.
+it can be used in the RoboCup Standard Platform League.
 
 .. note::
     The simulation server **does not provide camera images**. This means that,
@@ -76,6 +74,10 @@ Parameters
 
     Initial heading of robot from the positive x-axis of the field in radians, where 0.0 is facing the opponent goal, and positive theta is anti-clockwise.
 
+.. _ROS2 Nao interfaces : https://nao-interfaces-docs.readthedocs.io/en/latest/
+.. _Compile-time composition: https://docs.ros.org/en/galactic/Tutorials/Composition.html#compile-time-composition-using-ros-services
+.. _Efficient intra-process communication: https://docs.ros.org/en/galactic/Tutorials/Intra-Process-Communication.html#efficient-intra-process-communication
+.. _ros2_rcss3d (ijnek fork): https://gitlab.com/ijnek/ros2_rcss3d
 .. _nao_sensor_msgs/msg/JointPositions: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#jointpositions
 .. _nao_sensor_msgs/msg/Buttons: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#buttons
 .. _nao_sensor_msgs/msg/Accelerometer: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#accelerometer
