@@ -14,7 +14,7 @@ In your ROS2 workspace, clone the repository:
 .. code-block:: console
 
    git clone --recursive https://github.com/ijnek/naosoccer_sim.git src/naosoccer_sim
-   vcs import src < src/naosoccer_sim/dependencies.repos
+   vcs import src < src/naosoccer_sim/dependencies.repos --recursive
 
 Building
 ********
