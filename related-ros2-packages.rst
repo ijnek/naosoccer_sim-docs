@@ -25,9 +25,9 @@ Related ROS2 Packages
 
     Provides packages specific to the Nao
 
-* `soccer_interfaces`_ package
+* `soccer_object_msgs`_ package
 
-    Defines ROS2 interfaces specific to Soccer.
+    Defines ROS2 msgs specific to soccer objects.
 
 * `team_ijnek`_ package
 
@@ -44,6 +44,6 @@ Related ROS2 Packages
 .. _nao_interfaces: https://nao-interfaces-docs.readthedocs.io/en/latest/
 .. _naosoccer_visualization: https://nao-soccer-visualization.readthedocs.io/en/latest/
 .. _naosoccer_sim: https://naosoccer-sim.readthedocs.io/en/latest/index.html
-.. _soccer_interfaces: https://soccer-interfaces.readthedocs.io/en/latest/
+.. _soccer_object_msgs: https://soccer-object-msgs.readthedocs.io/en/latest/
 .. _team_ijnek: https://github.com/ijnek/team_ijnek
 .. _naosoccer_pos_action: https://github.com/ijnek/naosoccer_pos_action

@@ -27,15 +27,15 @@ Published Topics
 
 * **sensors/angle** (`nao_sensor_msgs/msg/Angle`_)
 
-* **vision/ball** (`soccer_vision_msgs/msg/Ball`_)
+* **vision/ball** (`soccer_object_msgs/msg/Ball`_)
 
-* **vision/field_lines** (`soccer_vision_msgs/msg/FieldLineArray`_)
+* **vision/field_lines** (`soccer_object_msgs/msg/FieldLineArray`_)
 
-* **vision/goalposts** (`soccer_vision_msgs/msg/GoalpostArray`_)
+* **vision/goalposts** (`soccer_object_msgs/msg/GoalpostArray`_)
 
-* **vision/robots** (`soccer_vision_msgs/msg/RobotArray`_)
+* **vision/robots** (`soccer_object_msgs/msg/RobotArray`_)
 
-* **vision/flags** (`soccer_vision_msgs/msg/FlagArray`_)
+* **vision/flags** (`soccer_object_msgs/msg/FlagArray`_)
 
 
 Subscribed Topics
@@ -84,9 +84,9 @@ Parameters
 .. _nao_sensor_msgs/msg/Gyroscope: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#gyroscope
 .. _nao_sensor_msgs/msg/Angle: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#angle
 .. _nao_sensor_msgs/msg/Touch: https://nao-interfaces-docs.readthedocs.io/en/latest/sensor-msgs.html#touch
-.. _soccer_vision_msgs/msg/Ball: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#ball
-.. _soccer_vision_msgs/msg/FieldLineArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#fieldlinearray
-.. _soccer_vision_msgs/msg/RobotArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#robotarray
-.. _soccer_vision_msgs/msg/GoalpostArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#goalpostarray
-.. _soccer_vision_msgs/msg/FlagArray: https://soccer-interfaces.readthedocs.io/en/latest/vision_msgs.html#flagarray
+.. _soccer_object_msgs/msg/Ball: https://soccer-object-msgs.readthedocs.io/en/latest/vision_msgs.html#ball
+.. _soccer_object_msgs/msg/FieldLineArray: https://soccer-object-msgs.readthedocs.io/en/latest/vision_msgs.html#fieldlinearray
+.. _soccer_object_msgs/msg/RobotArray: https://soccer-object-msgs.readthedocs.io/en/latest/vision_msgs.html#robotarray
+.. _soccer_object_msgs/msg/GoalpostArray: https://soccer-object-msgs.readthedocs.io/en/latest/vision_msgs.html#goalpostarray
+.. _soccer_object_msgs/msg/FlagArray: https://soccer-object-msgs.readthedocs.io/en/latest/vision_msgs.html#flagarray
 .. _nao_command_msgs/msg/JointPositions: https://nao-interfaces-docs.readthedocs.io/en/latest/command-msgs.html#jointpositions
